@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useAuth } from '../../context/AuthContext';
 import { Shield, UploadCloud, CheckCircle, AlertCircle, FileText, Image as ImageIcon, Send, Clock } from 'lucide-react';
 
 export const ProviderVerification = () => {

@@ -1,19 +1,17 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingBag, CheckCircle, AlertCircle, Search, FileText, Loader2, ExternalLink, Eye, X, MapPin, Phone, Mail, Info } from 'lucide-react';
+import { ShoppingBag, CheckCircle, AlertCircle, Search, FileText, Loader2, ExternalLink, Eye, X, MapPin, Phone, Mail } from 'lucide-react';
 import api from '../../../services/api';
 
 export const AdminShops = () => {
   const [shops, setShops] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState('all');
   const [selectedShop, setSelectedShop] = useState<any>(null);
 
   const fetchShops = async () => {
     setLoading(true);
-    setError('');
     try {
       const res = await api.get('/shops'); 
       if (res.data && res.data.data) {
@@ -21,7 +19,6 @@ export const AdminShops = () => {
       }
     } catch (err: any) {
       console.error(err);
-      setError(err.response?.data?.message || 'Erreur technique au chargement.');
     } finally {
       setLoading(false);
     }

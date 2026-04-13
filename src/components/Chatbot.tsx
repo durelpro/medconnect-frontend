@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { MessageSquare, X, Send, Loader2, Bot, User, MapPin, Phone, ShoppingBag, Eye, ExternalLink } from 'lucide-react';
+import { MessageSquare, X, Send, Bot, User, MapPin, Phone, ShoppingBag } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import api from '../services/api';

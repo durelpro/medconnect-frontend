@@ -1,10 +1,7 @@
 import { useState, useEffect } from 'react';
-import { User, CheckCircle, FileText } from 'lucide-react';
-import { useAuth } from '../../context/AuthContext';
 import api from '../../services/api';
-
+import { User, CheckCircle, FileText } from 'lucide-react';
 export const ProviderSchedule = () => {
-  const { user } = useAuth();
   
   const [appointments, setAppointments] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
